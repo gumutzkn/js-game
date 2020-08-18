@@ -8,11 +8,6 @@ let ctx = canvas.getContext("2d");
 const GAME_WIDTH = 1200;
 const GAME_HEIGHT = 800;
 
-let paddle = new Paddle(GAME_WIDTH, GAME_HEIGHT);
-let ball = new Ball(GAME_WIDTH, GAME_HEIGHT);
-
-new InputHandler(paddle);
-
 let lastTime = 0;
 
 const gameLoop = (timestamp) => {
