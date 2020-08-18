@@ -1,10 +1,16 @@
+import Paddle from "./paddle.js";
+import InputHandler from "./input.js";
+import Ball from "./ball.js";
+
 export default class Game {
   constructor(gameWidth, gameHeight) {
     this.gameWidth = gameWidth;
     this.gameHeight = gameHeight;
+  }
 
-    let paddle = new Paddle(GAME_WIDTH, GAME_HEIGHT);
-    let ball = new Ball(GAME_WIDTH, GAME_HEIGHT);
+  start() {
+    let paddle = new Paddle(this);
+    let ball = new Ball(this);
 
     new InputHandler(paddle);
   }
