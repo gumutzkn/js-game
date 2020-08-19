@@ -5,7 +5,7 @@ export default class Brick {
     this.game = game;
 
     this.position = position;
-    this.width = 100;
+    this.width = 120;
     this.height = 32;
   }
 

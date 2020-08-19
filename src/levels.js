@@ -3,22 +3,25 @@ import Brick from "./brick.js";
 export function buildLevel(game, level) {
   let bricks = [];
 
-  level.forEach((row, index) => {
+  level.forEach((row, rowIndex) => {
     row.forEach((brick, brickIndex) => {
       if (brick === 1) {
         let position = {
-          x: 0,
-          y: 0,
+          x: 120 * brickIndex,
+          y: 100 + 32 * rowIndex,
         };
         bricks.push(new Brick(game, position));
       }
     });
   });
+
+  return bricks;
 }
 
 export const level1 = [
-  [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [0, 1, 0, 1, 0, 0, 0, 0, 0, 1],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+  [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
 ];
