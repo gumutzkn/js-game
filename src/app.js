@@ -17,11 +17,8 @@ const gameLoop = (timestamp) => {
 
   ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
 
-  paddle.update(deltaTime);
-  paddle.draw(ctx);
-
-  ball.update(deltaTime);
-  ball.draw(ctx);
+  game.update(deltaTime);
+  game.draw(ctx);
 
   requestAnimationFrame(gameLoop);
 };

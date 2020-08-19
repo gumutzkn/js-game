@@ -14,4 +14,14 @@ export default class Game {
 
     new InputHandler(paddle);
   }
+
+  update(deltaTime) {
+    this.paddle.update(deltaTime);
+    this.ball.update(deltaTime);
+  }
+
+  draw(ctx) {
+    this.paddle.draw(ctx);
+    this.ball.draw(ctx);
+  }
 }
